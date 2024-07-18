@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Formilario de Encuesta</title>
+  </head>
+  <body>
+    <h1 id="title">Formulario de Encuesta sobre el Estado de la Salud</h1>
+    <p id="description">
+      Ayudanos para informar y concientizar a personas con sedentarismo.
+    </p>
+    <form action="" id="survey-form">
+      <fieldset class="data-user">
+        <label id="name-label" for="name"
+          >Ingrese su nombre:
+          <input
+            required
+            id="name"
+            type="text"
+            placeholder="Ej: Agustin Caceres"
+        /></label>
+        <label id="number-label" for="age"
+          >Ingrese su edad:
+          <input
+            id="number"
+            type="number"
+            min="0"
+            max="99"
+            placeholder="Ej: 32"
+            value="age"
+        /></label>
+      </fieldset>
+      <fieldset class="drop-option">
+        <label class="dropdown-option" id="current-rol" for="rol"
+          >¿Qué opción describe mejor su función actual?
+          <select name="dropdown" id="dropdown">
+            <option value="0">Seleccione su rol actual</option>
+            <option value="1">Estudiante</option>
+            <option value="2">Estudiante de tiempo completo</option>
+            <option value="3">Trabajador de tiempo completo</option>
+            <option value="4">Jornalero</option>
+            <option value="5">Prefiero no decirlo</option>
+            <option value="6">Otros</option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset class="radio-fieldset">
+        <legend class="radio-label">
+          Alguna vez has practicado algun deporte o ejercicio?
+        </legend>
+        <label class="sii"
+          ><input
+            id="si"
+            type="radio"
+            name="si-no"
+            value="si"
+            checked
+          />Si</label
+        >
+        <label class="nomuchoo"
+          ><input id="nomucho" type="radio" name="si-no" value="no" />Muy
+          Poco</label
+        >
+        <label class="noo"
+          ><input id="no" type="radio" name="si-no" value="no" />No</label
+        >
+      </fieldset>
+      <fieldset class="check-fieldset">
+        <legend class="legend-check">
+          ¿Cuáles de estos deportes y ejercicios te gustaría hacer?
+        </legend>
+        <div class="column">
+          <label class="check-label"
+            ><input value="futbol" id="futbol" type="checkbox" />Futbol</label
+          >
+          <label class="check-label"
+            ><input
+              value="basquetbol"
+              id="basquet"
+              type="checkbox"
+            />Basquetbol</label
+          >
+          <label class="check-label"
+            ><input
+              value="voleibol"
+              id="volei"
+              type="checkbox"
+            />Voleibol</label
+          >
+          <label class="check-label"
+            ><input
+              value="calistenia"
+              id="calis"
+              type="checkbox"
+            />Calistenia</label
+          >
+        </div>
+        <div class="column">
+          <label class="check-label"
+            ><input value="natacion" id="nata" type="checkbox" />Natacion</label
+          >
+          <label class="check-label"
+            ><input value="handball" id="hand" type="checkbox" />Handball</label
+          >
+          <label class="check-label"
+            ><input
+              value="atletismo"
+              id="atle"
+              type="checkbox"
+            />Atletismo</label
+          >
+          <label class="check-label"
+            ><input value="otros" id="otros" type="checkbox" />Otros</label
+          >
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <label class="titttext"
+          >¿Podrias compartir algunas estrategias para combatir el
+          sedentarismo?</label
+        >
+        <label class="bio" for="bio">
+          <textarea
+            name="bio"
+            id="bio"
+            cols="30"
+            rows="10"
+            placeholder="Escriba aqui su respuesta ..."
+          ></textarea>
+        </label>
+      </fieldset>
+      <aside>
+        <legend class="check-label">
+          ¿Le gustaría comunicarse con nosotros?
+          <label class="res-email"
+            ><input
+              value="check-email"
+              id="check-email"
+              type="checkbox"
+              onclick="emailDrop()"
+          /></label>
+        </legend>
+        <span class="res-span" id="res">
+          <label id="email-label" for="email"
+            >Ingrese su email:
+            <input
+              id="email"
+              type="email"
+              placeholder="ingrese su email"
+              value="email"
+          /></label>
+        </span>
+      </aside>
+      <input id="submit" type="submit" />
+    </form>
+    <script src="utils/drop.js"></script>
+    <script src="/js/submit.js"></script>
+  </body>
+</html>
