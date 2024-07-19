@@ -14,19 +14,12 @@ body {
   margin: auto;
   gap: 20px;
   padding-top: 20px;
-}
-
-fieldset {
-  /* border: none; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 25px 20px;
+  font-size: 24px;
   text-align: center;
 }
-
 #survey-form {
   display: flex;
+  width: 90%;
   gap: 25px;
   flex-direction: column;
   padding-top: 20px;
@@ -36,8 +29,14 @@ fieldset {
   border-radius: 7px;
   font-size: 24px;
 }
-.res-span {
-  display: none;
+
+fieldset {
+  /* border: none; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 20px;
+  text-align: center;
 }
 
 .data-user label {
@@ -73,23 +72,40 @@ fieldset {
 }
 
 .check-fieldset {
-    align-items: flex-start;
-    flex-wrap: wrap;
-    text-align: center;
+    display: grid;
+    justify-content: center;
+    width: 0 auto;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(
+            240px,
+            1rem
+        )
+    );
 }
 .check-label{
     display: inline-flex;
     margin: 10px auto;
-}
-.column {
-    display: flex;
-    flex-direction: row;
-    width: 90%;    
+    border: 2px solid #000000;
+    border-radius: 4px;
+    padding: 5px;
+    width: 154px;
 }
 .check-fieldset input{
-    margin: 5px 10px;
+    margin: 5px 7px;
 }
 
+.usertext-fildset{
+  display: flex;
+}
+.usertext-textarea{
+  margin: 12px auto;
+  resize: none;
+}
+
+.res-span {
+  display: none;
+}
 
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
